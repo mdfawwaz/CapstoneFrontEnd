@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 30px;
+      margin: 0;
+      font-family: 'Times New Roman';
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      max-width: 1000px;
+    }
+
+    .panel {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .map {
+      flex: 1;
+      height: 620px;
+      width: 620px;
+    }
+
+    .sb-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .sb-title-icon {
+      margin-right: 10px;
+    }
+
+    .half-input-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .half-input {
+      flex: 1;
+      margin-right: 5px;
+    }
+
+    .button-cta {
+      display: block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button-cta:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="panel">
+      <div class="sb-title">
+        <img class="sb-title-icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/location_pin/v5/24px.svg" alt="">
+        <span>Address Selection</span>
+      </div>
+      <input type="text" placeholder="Address" id="location-input" #locationInput [(ngModel)]="locationInputValue"/>
+      <input type="text" placeholder="Apt, Suite, etc (optional)" #aptSuite  [(ngModel)]="aptSuiteValue"/>
+      <input type="text" placeholder="City" id="locality-input" #city  [(ngModel)]="cityValue"/>
+      <div class="half-input-container">
+        <input type="text" class="half-input" placeholder="State/Province" id="administrative_area_level_1-input" #state  [(ngModel)]="stateValue"/>
+        <input type="text" class="half-input" placeholder="Zip/Postal code" id="postal_code-input" #zip  [(ngModel)]="zipValue"/>
+      </div>
+      <input type="text" placeholder="Country" id="country-input" #country  [(ngModel)]="countryValue"/>
+      <button class="button-cta" (click)="onCheckout()">Submit Location</button>
+      <button class="button-cta" routerLink="/productselection">Product Select</button>
+
+    </div>
+    <div class="map" id="gmp-map" #gmpMap></div>
+  </div>
+</body>
+</html>

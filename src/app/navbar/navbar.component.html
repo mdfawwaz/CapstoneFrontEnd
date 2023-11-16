@@ -1,0 +1,23 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<nav class="navbar">
+  <div class="logo">
+    <a routerLink="/selectpage">Quotawwaz</a>
+  </div>
+  <div class="nav-links">
+    <ng-container *ngIf="isLoggedIn; else notLoggedIn">
+      <div class="user-info">
+        <i class='fas fa-user-alt' style='font-size:36px'></i>
+        <span> <b>Welcome {{ username }}</b></span>
+        <button (click)="logout()">Logout</button>
+      </div>
+    </ng-container>
+    <ng-template #notLoggedIn>
+      <a routerLink="/login">Login</a>
+    </ng-template>
+    <a routerLink="/selectpage">Select Page</a>
+    <a routerLink="/productselection">Product Page</a>
+    <a routerLink="/location">Location Page</a>
+    <a routerLink="/configuration/1">Configuration Page</a>
+  </div>
+</nav>

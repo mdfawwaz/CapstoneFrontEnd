@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Tile</title>
+</head>
+
+<body>
+  <div class="product-tiles">
+    <div class="product-tile" *ngFor="let product of products" (click)="selectProduct(product)">
+      <div class="product-image">
+        <img class="product-image" [src]="product.imageURL" alt="{{ product.name }}">
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">{{ product.name }}</h3>
+        <h3>Available: {{ product.maxProductsPerLocation }}</h3>
+        <p class="product-description">{{ product.details }}</p>
+        <div class="price-container">
+          <p class="product-price">Price: $ {{ product.price }}</p>
+        </div>
+
+        <div class="buttons-container">
+          <button class="features-button styled-button" (click)="toggleFeaturesDialog(product)">
+            Features
+          </button>
+          <div *ngIf="showFeaturesDialog && selectedFeature === product.features" class="dialog-container"
+            [style.top]="dialogPosition.top" [style.left]="dialogPosition.left">
+            <h2 class="dialog-title">Product Features</h2>
+            <ul class="dialog-list">
+              <li *ngFor="let feature of selectedFeature" class="dialog-list-item">
+                {{ feature.name }}
+                <button class="parameters-button styled-button"
+                  (click)="toggleParametersDialog(feature.parameters)">
+                  Parameters
+                </button>
+              </li>
+            </ul>
+          </div>
+        
+          <div *ngIf="showParametersDialog && selectedParameters.length > 0" class="dialog-container"
+            [style.top]="dialogPosition.top" [style.left]="dialogPosition.left">
+            <h2 class="dialog-title">Feature Parameters</h2>
+            <ul class="dialog-list">
+              <li *ngFor="let parameter of selectedParameters" class="dialog-list-item">{{ parameter.name }}</li>
+            </ul>
+          </div>
+        
+          <button class="select-button styled-button" (click)="goToConfigurationPage()">
+            Select
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+body {
+  background-color: #f0f0f0; 
+  font-family: Arial, sans-serif; 
+}
+
+.container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.container:hover {
+  background-color: #f5f5f5; }
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.flex-item {
+  flex: 0 0 calc(50% - 20px);
+  text-align: center;
+  transition: transform 0.3s;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; 
+}
+
+.tile {
+  border: 2px solid #eee;
+  padding: 20px;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+.tile-title {
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: #ffffff;
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 3px 9px;
+  margin: 0 0 10px 0; 
+}
+
+input {
+  width: 100%;
+  padding: 20px;
+  border:5px solid #000000;
+  border-radius: 5px;
+}
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Times New Roman';
+  font-size:20px;
+  background-color: #ffebcb;
+  border: 1px solid #b50b0b;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  margin-top: 20px;
+}
+
+.custom-table th, .custom-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.custom-table th {
+  background-color: #38001d; 
+  color: #fff;
+}
+
+.custom-table th, .custom-table td:last-child {
+  width: 20%;}
+
+
+.custom-table button {
+  margin: 5px;
+}
+.submit-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit-details {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #540061;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-details:hover {
+  background-color: #0056b3; 
+}
+
+.flex-item.submit-button {
+  flex-basis: 50%; 
+  text-align: center; 
+  margin-top: 20px; 
+}
+
+button.submit-details,
+button[routerLink="/location"] {
+  width: 50%;
+  padding: 10px 0;
+  text-align:center;
+}
+
+button.submit-details {
+  background-color: #350059; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.submit-details:hover {
+  background-color: #0056b3; 
+}
+
+button[routerLink="/location"] {
+  background-color: #a70000; 
+  color: #fff; 
+  border: none;
+  text-align:center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[routerLink="/location"]:hover {
+  background-color: #2BAE2B; 
+}
+.button-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.button-item {
+  width: 25%; 
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px; 
+  background-color: #004c4e; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3; 
+}

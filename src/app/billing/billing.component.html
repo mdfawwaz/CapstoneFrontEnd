@@ -1,0 +1,10 @@
+<div class="billing-container">
+    <h3>Billing Page</h3>
+    <p><strong>Product Name:</strong> {{ productName }}</p>
+    <p><strong>Location:</strong> {{ location }}</p>
+    <p><strong>Product ID:</strong> {{ productId }}</p>
+    <p><strong>Product Price:</strong> {{ productPrice | currency }}</p>
+    <button (click)="makePayment()">Make Payment</button>
+  </div>
+  
+  

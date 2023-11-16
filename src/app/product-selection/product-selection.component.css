@@ -1,0 +1,134 @@
+.product-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.product-tile {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-tile:hover {
+  transform: scale(1.03);
+}
+
+.product-details {
+  padding: 20px;
+}
+
+.product-name {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-description {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.product-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.select-container {
+  margin-top: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.features-button, .parameters-button, .select-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.features-button:hover, .parameters-button:hover, .select-button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .product-tile {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product-tile {
+    width: 100%;
+  }
+}
+
+.styled-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.styled-button:hover {
+  background-color: #0056b3;
+}
+
+.dialog-container {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.dialog-title {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+}
+
+.dialog-list {
+  list-style: none;
+  padding: 0;
+}
+
+.dialog-list-item {
+  margin: 4px 0;
+  color: #555;
+}
+
+.dialog-list-item::before {
+  content: '\2022';
+  margin-right: 4px;
+  font-size: 12px;
+  color: #007BFF;
+}
